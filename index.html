@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        //QQ群类：
+        function QQQun() {
+            this.zuoye="";
+        }
+        
+        //老师类：
+        function Teacher() {
+
+        }
+        Teacher.prototype.liuzuoye=function (content) {
+            qqqun.zuoye=content;
+        };
+
+        //学生类：
+        function Student() {
+
+        }
+
+        Student.prototype.xiezuoye=function () {
+            console.log("我要写作业啦，" + qqqun.zuoye);
+        };
+
+        //实例化：
+        var qqqun=new QQQun();  //要先实例化QQ群，注意：中介者的名字一旦被实例出来就轻易不要改动
+        var xiaohua=new Student();
+        var xiaoming=new Student();
+        var kaoLa=new Teacher();
+
+        kaoLa.liuzuoye("完成贪吃蛇！～");
+        xiaohua.xiezuoye();
+        xiaoming.xiezuoye();
+    </script>
+</body>
+</html>
